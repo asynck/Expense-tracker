@@ -1,11 +1,7 @@
-// import React, { useState } from 'react';
-
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
 
 const ExpenseItem = (props) => {
-  // const [title, setTitle] = useState(props.title);
-
   const deleteHandler = () => {
     props.onDelete(props.title);
   };
@@ -20,7 +16,8 @@ const ExpenseItem = (props) => {
         <div className="expense-item__price">£ {props.amount}</div>
       </div>
       <button className="delete-expense__actions" onClick={deleteHandler}>
-        X
+        {' '}
+        X{' '}
       </button>
     </div>
   );
